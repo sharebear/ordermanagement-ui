@@ -1,3 +1,9 @@
 <h2>List of orders</h2>
 
+<ul>
+  {{#each model as |order|}}
+  <li>{{order.name}} - {{order.executionDate}}</li>
+  {{/each}}
+</ul>
+
 {{outlet}}
