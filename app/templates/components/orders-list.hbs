@@ -2,7 +2,7 @@
 
 <ul>
   {{#each orders as |order|}}
-  <li {{action "showOrder" order.orderId}}>{{order.name}} - {{order.executionDate}}</li>
+  <li>{{#link-to "orders.edit" order.orderId}}{{order.name}} - {{order.executionDate}}{{/link-to}}</li>
   {{/each}}
 </ul>
 
