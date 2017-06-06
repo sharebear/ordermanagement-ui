@@ -6,7 +6,7 @@
   {{mdl-textfield label="Email" type="email" value=order.email}}
   {{mdl-textfield label="From address" value=order.fromAddress}}
   {{mdl-textfield label="To address" value=order.toAddress}}
-  {{mdl-textfield label="Execution date" value=order.executionDate}}
+  {{mdl-textfield label="Execution date" value=order.executionDate pattern="(1|2)[0-9]{3}-(0|1)[0-1]-(0|1)[0-1]"}}
   {{mdl-textarea label="Comments" value=order.comments}}
   {{mdl-button isRaised=true isAccent=true text="Save"}}
   {{mdl-button isRaised=true text="Cancel" action="cancelEdit"}}
