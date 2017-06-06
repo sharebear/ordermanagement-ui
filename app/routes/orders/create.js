@@ -16,9 +16,9 @@ export default Ember.Route.extend({
         contentType: "application/json",
         method: "POST"
       })
-      .done(function() {
+      .done(() => {
         this.transitionTo('orders');
-      }.bind(this));
+      });
     },
     cancelEdit() {
       history.back();
