@@ -19,6 +19,9 @@ export default Ember.Route.extend({
       .done(function() {
         this.transitionTo('orders');
       }.bind(this));
+    },
+    cancelEdit() {
+      history.back();
     }
   }
 });
