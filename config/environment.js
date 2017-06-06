@@ -1,4 +1,4 @@
-/* eslint-env node */
+/* jshint node: true */
 
 module.exports = function(environment) {
   var ENV = {
@@ -16,7 +16,9 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    sassOptions: {
+      includePaths: ['bower_components/material-design-lite/src']
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
