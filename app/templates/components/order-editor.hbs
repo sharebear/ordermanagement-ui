@@ -1,1 +1,14 @@
+<h2>Create Order</h2>
+
+<form {{action "saveOrder" on="submit"}}>
+  {{mdl-textfield label="Name" value=order.name}}
+  {{mdl-textfield label="Phone number" value=order.phoneNumber}}
+  {{mdl-textfield label="Email" type="email" value=order.email}}
+  {{mdl-textfield label="From address" value=order.fromAddress}}
+  {{mdl-textfield label="To address" value=order.toAddress}}
+  {{mdl-textfield label="Execution date" value=order.executionDate}}
+  {{mdl-textarea label="Comments" value=order.comments}}
+  {{mdl-button text="Save"}}
+</form>
+
 {{yield}}

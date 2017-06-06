@@ -1,14 +1,3 @@
-<h2>Create Order</h2>
-
-<form {{action "saveOrder" on="submit"}}>
-  {{mdl-textfield label="Name" value=model.name}}
-  {{mdl-textfield label="Phone number" value=model.phoneNumber}}
-  {{mdl-textfield label="Email" type="email" value=model.email}}
-  {{mdl-textfield label="From address" value=model.fromAddress}}
-  {{mdl-textfield label="To address" value=model.toAddress}}
-  {{mdl-textfield label="Execution date" value=model.executionDate}}
-  {{mdl-textarea label="Comments" value=model.comments}}
-  {{mdl-button text="Save"}}
-</form>
+{{order-editor order=model saveOrder="saveOrder"}}
 
 {{outlet}}
