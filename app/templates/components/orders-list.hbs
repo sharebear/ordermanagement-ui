@@ -1,5 +1,7 @@
 <h2>{{title}}</h2>
 
+{{mdl-button icon='add' isFloating=true action="newOrder"}}
+
 <ul>
   {{#each orders as |order|}}
   <li>{{#link-to "orders.edit" order.orderId}}{{order.name}} - {{order.executionDate}}{{/link-to}}</li>

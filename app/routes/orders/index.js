@@ -6,5 +6,10 @@ export default Ember.Route.extend({
     .then(function(data) {
       return data.data;
     });
+  },
+  actions: {
+    newOrder() {
+      this.transitionTo("orders.create");
+    }
   }
 });
