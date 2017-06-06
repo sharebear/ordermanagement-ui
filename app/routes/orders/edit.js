@@ -10,13 +10,15 @@ export default Ember.Route.extend({
   actions: {
     saveOrder() {
       let current = this.modelFor(this.routeName);
+      let updateRequest = Object.assign({}, current);
+      delete updateRequest.orderId;
       Ember.$.ajax(`http://localhost:4567/ordermanagement/orders/${current.orderId}/update-order`, {
-        data: JSON.stringify({ data: current }),
+        data: JSON.stringify({ data: updateRequest }),
         contentType: "application/json",
         method: "POST"
       })
-      .done(function() {
-        this.refresh();
+      .done(() => {
+        this.transitionTo("orders");
       });
     }
   }
