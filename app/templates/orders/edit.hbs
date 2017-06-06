@@ -1,5 +1,3 @@
-<h2>Order with id {{model.orderId}}</h2>
+{{order-editor title="Edit order" order=model saveOrder="saveOrder"}}
 
-{{input type="text" value=model.name}}
-<button {{action "saveOrder"}}>Save</button>
 {{outlet}}
